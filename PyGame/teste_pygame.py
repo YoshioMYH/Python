@@ -2,8 +2,8 @@ import pygame
 
 pygame.init()
 
-red = 255
-green = 255
+red = 0
+green = 0
 blue = 255
 color = (red, green, blue)
 
@@ -22,9 +22,10 @@ while (gameRun):
         if(event.type == pygame.KEYDOWN):
             print(event)
 
-    gameDisplay.fill(color)
+    gameDisplay.fill((255, 255, 255))
 
     pygame.draw.rect(gameDisplay, (0, 0, 0), [300, 300, 10, 10])
+    gameDisplay.fill(color, [0, 0, 10, 10])
 
     pygame.display.update()
 pygame.quit()
